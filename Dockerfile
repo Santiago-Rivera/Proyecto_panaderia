@@ -1,4 +1,4 @@
-FROM java:1.8.0
+FROM java:17.0.14
 
 WORKDIR /usr/src/app
 
