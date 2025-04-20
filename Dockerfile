@@ -10,4 +10,4 @@ RUN openjdk8-jre \
     && mvn clean package -DskipTests
 
 
-CMD ["java", "projecto_panaderia""]
+CMD ["java", "projecto_panaderia"]
