@@ -1,40 +1,67 @@
-        body {
-            font-family: Arial, sans-serif;
+body {
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f5f2;
+            background: linear-gradient(135deg, #f8f5f2 60%, #ffe5b4 100%);
+            min-height: 100vh;
         }
         header {
-            background-color: #d2691e;
+            background: linear-gradient(90deg, #d2691e 70%, #ffb347 100%);
             color: white;
-            padding: 20px;
+            padding: 36px 20px 24px 20px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         main {
-            padding: 20px;
+            padding: 30px 5vw 80px 5vw;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 32px;
         }
         .producto {
-            border: 1px solid #d2691e;
-            border-radius: 5px;
-            padding: 15px;
+            border: 1.5px solid #d2691e;
+            border-radius: 18px;
+            padding: 22px 18px 18px 18px;
             background-color: #fff;
             text-align: center;
-            width: 300px;
+            width: 310px;
+            box-shadow: 0 2px 12px rgba(210,105,30,0.07);
+            transition: transform 0.18s, box-shadow 0.18s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .producto:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(210,105,30,0.13);
         }
         .producto img {
             max-width: 100%;
-            border-radius: 5px;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            box-shadow: 0 2px 8px rgba(210,105,30,0.08);
+        }
+        .producto h2 {
+            color: #d2691e;
+            margin: 10px 0 8px 0;
+            font-size: 1.25em;
+            font-weight: bold;
+        }
+        .producto p {
+            color: #444;
+            font-size: 1em;
+            margin-bottom: 0;
         }
         footer {
-            background-color: #d2691e;
+            background: linear-gradient(90deg, #d2691e 70%, #ffb347 100%);
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 14px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            font-size: 1em;
+            letter-spacing: 1px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
         }
