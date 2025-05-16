@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Panadería Delicias</title>
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="Styles/carrito.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="carrito-body">
+                <!-- Los productos del carrito se mostrarán aquí -->
+            </tbody>
+        </table>
+        <div class="total" id="carrito-total"></div>
+        <button class="vaciar-btn" onclick="vaciarCarrito()">Vaciar carrito</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 Panadería Delicias. Todos los derechos reservados.</p>
+    </footer>
+    <script src="Scripts/carrito.js"></script>
+</body>
+</html>

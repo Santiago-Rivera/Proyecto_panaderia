@@ -1,0 +1,76 @@
+        main {
+            max-width: 700px;
+            margin: 40px auto 80px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(210,105,30,0.07);
+            padding: 32px 24px;
+        }
+        h1 {
+            color: #d2691e;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+        th, td {
+            padding: 12px 8px;
+            text-align: center;
+        }
+        th {
+            background: #ffe5b4;
+            color: #d2691e;
+            font-size: 1.1em;
+        }
+        tr:nth-child(even) {
+            background: #f8f5f2;
+        }
+        .cantidad-btn {
+            background: #d2691e;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 0 4px;
+        }
+        .cantidad-btn:hover {
+            background: #b85c1c;
+        }
+        .eliminar-btn {
+            background: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        .eliminar-btn:hover {
+            background: #d11a2a;
+        }
+        .vaciar-btn {
+            background: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 18px;
+            float: right;
+        }
+        .vaciar-btn:hover {
+            background: #d11a2a;
+        }
+        .total {
+            text-align: right;
+            font-size: 1.2em;
+            color: #d2691e;
+            margin-top: 18px;
+        }

@@ -5,8 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - Panadería Delicias</title>
     <link rel="stylesheet" href="Styles/productos.css">
+    <style>
+        .btn-carrito {
+            background: #d2691e;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 18px;
+            margin-top: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-carrito:hover {
+            background: #b85c1c;
+        }
+        .btn-carrito .icono {
+            font-size: 1.2em;
+        }
+        .ver-carrito-link {
+            position: absolute;
+            top: 32px;
+            right: 40px;
+            z-index: 100;
+        }
+        .ver-carrito-link {
+            display: flex;
+            align-items: center;
+        }
+        .ver-carrito-link a {
+            color: #d2691e;
+            font-size: 2em;
+            text-decoration: none;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .ver-carrito-link a:hover {
+            color: #b85c1c;
+        }
+        .carrito-contador {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: #ff4d4d;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.7em;
+            padding: 2px 7px;
+            font-weight: bold;
+        }
+        body {
+            position: relative;
+        }
+        .cantidad-input {
+            width: 50px;
+            text-align: center;
+            margin-left: 8px;
+            border-radius: 8px;
+            border: 1px solid #d2691e;
+            padding: 4px;
+        }
+    </style>
 </head>
 <body>
+    <div class="ver-carrito-link">
+        <a href="carrito.html" title="Ver carrito">
+            🛒
+            <span class="carrito-contador" id="carrito-contador">0</span>
+        </a>
+    </div>
     <header>
         <h1>Nuestros Productos</h1>
         <p>Descubre nuestra variedad de panes, pasteles y postres.</p>
@@ -17,52 +87,131 @@
             <h2>Pan Integral</h2>
             <p>Un pan saludable y delicioso, perfecto para cualquier comida.</p>
             <p><strong>Precio: $1.00</strong></p>
+            <div>
+                <label for="cantidad-pan-integral">Cantidad:</label>
+                <input type="number" id="cantidad-pan-integral" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Pan Integral', 1.00, 'cantidad-pan-integral')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://th.bing.com/th/id/OIP.Wmc4mHTn678ylkEo2CNzzQAAAA?cb=iwc1&rs=1&pid=ImgDetMain" alt="Pastel de Chocolate">
             <h2>Pastel de Chocolate</h2>
             <p>Un pastel suave y esponjoso con el mejor chocolate.</p>
             <p><strong>Precio: $1.50</strong></p>
+            <div>
+                <label for="cantidad-pastel-chocolate">Cantidad:</label>
+                <input type="number" id="cantidad-pastel-chocolate" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Pastel de Chocolate', 1.50, 'cantidad-pastel-chocolate')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://delivery.pwcc.cl/wp-content/uploads/2020/06/Empanadas-de-queso-4.jpg" alt="Empanadas de Queso">
             <h2>Empanadas de Queso</h2>
             <p>Empanadas recién horneadas con un relleno cremoso de queso.</p>
             <p><strong>Precio: $0.80</strong></p>
+            <div>
+                <label for="cantidad-empanadas-queso">Cantidad:</label>
+                <input type="number" id="cantidad-empanadas-queso" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Empanadas de Queso', 0.80, 'cantidad-empanadas-queso')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://i.pinimg.com/originals/a3/ff/a5/a3ffa5f1c78ff0b61c89b1a159c102eb.jpg" alt="Croissant">
             <h2>Croissant</h2>
             <p>Clásico croissant francés, hojaldrado y mantequilloso, ideal para el desayuno.</p>
             <p><strong>Precio: $1.20</strong></p>
+            <div>
+                <label for="cantidad-croissant">Cantidad:</label>
+                <input type="number" id="cantidad-croissant" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Croissant', 1.20, 'cantidad-croissant')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://uploads.candelaestereo.com/1/2021/08/pan-de-yuca-receta-practica-y-deliciosa-3.jpg" alt="Pan de Yuca">
             <h2>Pan de Yuca</h2>
             <p>Delicioso panecillo suave y esponjoso, típico de la región, hecho con almidón de yuca y queso.</p>
             <p><strong>Precio: $0.90</strong></p>
+            <div>
+                <label for="cantidad-pan-yuca">Cantidad:</label>
+                <input type="number" id="cantidad-pan-yuca" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Pan de Yuca', 0.90, 'cantidad-pan-yuca')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://th.bing.com/th/id/OIP.okbgaqxo197agHixlHwidAHaEK?cb=iwc2&rs=1&pid=ImgDetMain" alt="Torta de Zanahoria">
             <h2>Torta de Zanahoria</h2>
             <p>Bizcocho húmedo de zanahoria con cobertura de queso crema, perfecto para la merienda.</p>
             <p><strong>Precio: $1.30</strong></p>
+            <div>
+                <label for="cantidad-torta-zanahoria">Cantidad:</label>
+                <input type="number" id="cantidad-torta-zanahoria" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Torta de Zanahoria', 1.30, 'cantidad-torta-zanahoria')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://www.vvsupremo.com/wp-content/uploads/2015/11/900X570_Pandebono-Columbian-Cheese-Bread.jpg" alt="Pan de Bono">
             <h2>Pan de Bono</h2>
             <p>Panecillo colombiano de queso, suave y con un sabor único, ideal para acompañar el café.</p>
             <p><strong>Precio: $1.00</strong></p>
+            <div>
+                <label for="cantidad-pan-bono">Cantidad:</label>
+                <input type="number" id="cantidad-pan-bono" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Pan de Bono', 1.00, 'cantidad-pan-bono')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
         <div class="producto">
             <img src="https://th.bing.com/th/id/OIP.jwhHnV9dvbDTMXX7NdFBGgHaEk?cb=iwc2&rs=1&pid=ImgDetMain" alt="Galletas Artesanales">
             <h2>Galletas Artesanales</h2>
             <p>Variedad de galletas hechas a mano, crujientes y llenas de sabor.</p>
             <p><strong>Precio: $0.60</strong></p>
+            <div>
+                <label for="cantidad-galletas-artesanales">Cantidad:</label>
+                <input type="number" id="cantidad-galletas-artesanales" class="cantidad-input" min="1" value="1">
+                <button class="btn-carrito" onclick="agregarAlCarrito('Galletas Artesanales', 0.60, 'cantidad-galletas-artesanales')">
+                    <span class="icono">🛒</span>Agregar al carrito
+                </button>
+            </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2025 Panadería Delicias. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        function agregarAlCarrito(nombre, precio, inputId) {
+            const cantidad = parseInt(document.getElementById(inputId).value) || 1;
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            const idx = carrito.findIndex(item => item.nombre === nombre);
+            if (idx > -1) {
+                carrito[idx].cantidad += cantidad;
+            } else {
+                carrito.push({ nombre, precio, cantidad });
+            }
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            actualizarContadorCarrito();
+        }
+
+        function actualizarContadorCarrito() {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            let totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+            document.getElementById('carrito-contador').textContent = totalItems;
+        }
+
+        // Actualizar el contador al cargar la página
+        actualizarContadorCarrito();
+    </script>
 </body>
 </html>
